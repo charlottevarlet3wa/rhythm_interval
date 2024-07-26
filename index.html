@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu de Musique</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="setIntervalScript.js" defer></script> -->
 </head>
 <body>
+    <div id="game">
 
-    <!-- script.js -->
-    <h1>Jeu de Musique</h1>
-    <img src="1.png" alt="sheet music">
-    <p>Entrez le bon temps pour chaque note :</p>
-    <div id="inputs-container"></div>
-    <button onclick="startGame()">Démarrer le jeu</button>
-    <div id="message"></div>
+        <h2>Gamme</h2>
+        <img src="1.png" alt="sheet music">
+        <!-- <p>Entrez le bon temps pour chaque note :</p> -->
+        <div id="inputs-container"></div>
+        <div id="message"></div>
+        <button onclick="startGame()">Jouer</button>
 
+    
+    
     <!-- setIntervalScript.js -->
     <!-- <h1>Exercice de Musique avec setInterval</h1>
     <p>Entrez le temps entre chaque note :</p>
@@ -27,6 +30,7 @@
     <button onclick="startInterval()">Démarrer le jeu</button>
     <button onclick="stopInterval()">Arrêter le jeu</button>
     <div id="message"></div> -->
-
+    
+    </div>
 </body>
 </html>

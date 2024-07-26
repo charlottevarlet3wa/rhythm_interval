@@ -1,12 +1,12 @@
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-const notes = [['c4'], ['d4'], ['e4'], ['f4'], ['g4', 'b4']];
+const notes = [['do4'], ['ré4'], ['mi4'], ['f4'], ['sol4', 'si4']];
 const frequencies = {
-    'c4': 261.63,
-    'd4': 293.66,
-    'e4': 329.63,
-    'f4': 349.23,
-    'g4': 392.00,
-    'b4': 493.88
+    'do4': 261.63,
+    'ré4': 293.66,
+    'mi4': 329.63,
+    'fa4': 349.23,
+    'sol4': 392.00,
+    'si4': 493.88
 };
 let index = 0;
 let intervalId;

@@ -1,0 +1,75 @@
+:root {
+    --red: rgb(245, 41, 10);
+    --blue: rgb(32, 166, 211);
+    --light: aliceblue;
+    --lightblue : rgb(77, 189, 226);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: small;
+}
+
+#game {
+    /* background-color: lightblue; */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 50px;
+}
+
+h2 {
+    /* text-align: center; */
+    color: var(--blue)
+}
+
+img {
+    width:fit-content;
+    /* margin: auto; */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 3px 2px;
+    width: 50px;
+    font-size: smaller;
+}
+
+#message {
+    color: var(--red);
+    /* text-align: center; */
+}
+
+button {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--blue);
+    /* background-color: var(--lightorange); */
+    color:var(--light);
+    /* color:var(--darkorange); */
+    /* border: 2px solid var(--darkorange); */
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: medium;
+    transition: 0.1s;
+    border: none;
+    /* margin: auto; */
+}
+
+button:hover {
+    background-color: var(--lightblue);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+
