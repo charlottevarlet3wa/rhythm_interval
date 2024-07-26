@@ -10,14 +10,23 @@
 </head>
 <body>
     <div id="game">
-
         <h2>Gamme</h2>
-        <img src="1.png" alt="sheet music">
+        <img id="sheet-music" src="1.png" alt="sheet music">
         <!-- <p>Entrez le bon temps pour chaque note :</p> -->
+        <div>
+            <label for="mode">Mode :</label>
+            <select id="mode" onchange="loadSheet(currentSheetIndex)">
+                <option value="setTimeout">setTimeout</option>
+                <option value="setInterval">setInterval</option>
+            </select>
+        </div>
         <div id="inputs-container"></div>
         <div id="message"></div>
-        <button onclick="startGame()">Jouer</button>
-
+        <div class="buttons">    
+            <button onclick="prevSheet()">←</button>
+            <button onclick="startGame()">Jouer</button>
+            <button onclick="nextSheet()">→</button>
+        </div>
     
     
     <!-- setIntervalScript.js -->

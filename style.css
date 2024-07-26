@@ -47,6 +47,11 @@ input {
     /* text-align: center; */
 }
 
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
 button {
     width: fit-content;
     padding: 10px;
