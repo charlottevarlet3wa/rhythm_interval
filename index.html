@@ -11,14 +11,22 @@
 <body>
     <div id="game">
         <h2>Gamme</h2>
-        <img id="sheet-music" src="1.png" alt="sheet music">
+        <img id="sheet-music" src="images/r_vador.jpg" alt="sheet music">
         <!-- <p>Entrez le bon temps pour chaque note :</p> -->
         <div>
             <label for="mode">Mode :</label>
-            <select id="mode" onchange="loadSheet(currentSheetIndex)">
+            <!-- <select id="mode" onchange="loadSheet(currentSheetIndex)">
                 <option value="setTimeout">setTimeout</option>
                 <option value="setInterval">setInterval</option>
-            </select>
+            </select> -->
+        </div>
+        <div id="bpm-container">
+            <input id="bpm-input" type="number" value="60"> bpm (battements par minute)</input>
+            <button id="bpm-btn">Change</button>
+            <p>Noire ♩ (1 temps) : <span id="noire">80</span></p>
+            <p>Croche pointée (0.75 temps) ♪ ou ♫ : <span id="croche-pointee">30</span></p>
+            <p>Croche ♪ ou ♫ (0.5 temps): <span id="croche">30</span></p>
+            <p>Double croche ♪ ou ♫ (0.25 temps): <span id="double-croche">30</span></p>
         </div>
         <div id="inputs-container"></div>
         <div id="message"></div>
@@ -41,5 +49,6 @@
     <div id="message"></div> -->
     
     </div>
+    <div id="generated-code" ></div>
 </body>
 </html>
