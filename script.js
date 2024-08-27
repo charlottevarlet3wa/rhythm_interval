@@ -1,4 +1,6 @@
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const bravoElem = document.getElementById('bravo');
+let bpm = 60;
 
 // Test
 
@@ -136,8 +138,6 @@ function calculateDurations() {
     // Update correction
     durationsCorrection.length = 0;
     sheets[currentSheetIndex].durations.map(duration => durationsCorrection.push(durationsMap.get(duration)));
-    console.log('new correction :')
-    console.log(durationsCorrection)
 }
 
 document.getElementById('bpm-btn').addEventListener('click', calculateDurations);
@@ -225,6 +225,8 @@ function startTimeoutGame() {
         }, totalTime);
         totalTime += time;
     });
+
+    bravoElem.textContent = "Vous avez joué " + sheets[currentSheetIndex].name + " !";
 }
 
 function startIntervalGame() {
@@ -309,6 +311,7 @@ function loadSheet(sheetIndex) {
     const notes = sheet.notesDisplay;
     const durations = sheet.durations;
 
+    calculateDurations();
     durationsCorrection.length = 0;
     // durations.map(duration => durationsCorrection.push(durationsMap[duration]));
     durations.map(duration => {
@@ -366,7 +369,7 @@ function loadSheet(sheetIndex) {
             const input = document.createElement('input');
             input.type = 'text';
             input.id = `time${notes.length - 1 - i}`;
-            input.value = durationsCorrection[notes.length - 1 - i];
+            // input.value = durationsCorrection[notes.length - 1 - i];
             // input.value = durationsCorrection.get(durations[i]);
             input.style.width = '50px';
             
